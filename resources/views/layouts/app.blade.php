@@ -15,6 +15,7 @@
             display: none !important;
         }
     </style>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8567cbef-b271-48ba-973d-e54a5cef8dda";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
     @livewireScripts
@@ -43,7 +44,7 @@
                 <div>
                     <nav class="flex h-9 items-center justify-between" aria-label="Global">
                         <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-                            <a href="#" class="-m-1.5 p-1.5">
+                            <a href="{{route('homepage')}}" class="-m-1.5 p-1.5">
                                 <span class="sr-only">Your Company</span>
                                 <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                                     alt="">

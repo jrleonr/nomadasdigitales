@@ -8,12 +8,17 @@
         "php": "^8.0.2",
         "filament/filament": "^2.0",
         "filament/forms": "^2.0",
+        "filament/notifications": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
+        "laravel/horizon": "^5.10",
         "laravel/jetstream": "^2.12",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^2.5",
+        "spatie/laravel-mailcoach": "^6.0",
+        "symfony/http-client": "^6.1",
+        "symfony/postmark-mailer": "^6.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -45,7 +50,8 @@
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "@php artisan filament:upgrade"
+            "@php artisan filament:upgrade",
+            "@php artisan vendor:publish --tag mailcoach-assets --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -67,6 +73,12 @@
             "pestphp/pest-plugin": true
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.spatie.be"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

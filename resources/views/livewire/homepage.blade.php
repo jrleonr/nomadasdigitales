@@ -12,8 +12,7 @@
             <div>
                 <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">¿Necesitas ayuda externa?</h1>
                 <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                    Encuentra los mejores freelancers y agencias para ayudarte en tu negocio con profesionales
-                    cualificados y seleccionados a mano.
+                    Encuentra los mejores freelancers y agencias para ayudarte en tu negocio.
                 </p>
                 <div class="mt-8 flex gap-x-4 sm:justify-center">
                     <a href="{{route('askForm')}}"
@@ -57,14 +56,13 @@
 
 <div class="bg-indigo-700">
     <div class="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:max-w-7xl lg:px-8 lg:py-40">
-        <h2 class="text-4xl font-bold tracking-tight text-white">Recibe propuestas cómodamente con soluciones a tus
+        <h2 class="text-4xl font-bold tracking-tight text-white">Recibe soluciones a tus
             problemas
         </h2>
         <p class="mt-6 max-w-3xl text-lg leading-8 text-indigo-200">
-            Es muy sencillo. Solo tienes que rellenar el formulario haciendo clic en el botón que tienes arriba. Sin
-            registro. Una vez completes el formulario y lo validemos, profesionales y agencias del marketing digital,
-            recibirán tu petición. Si los profesionales de la plataforma creen que pueden ayudarte y tu propueta se
-            ajusta a su perfil, se pondrán en contacto contigo.
+            Es muy sencillo. Solo tienes que rellenar un formulario. Sin registro. 
+            Una vez lo completes y lo validemos, profesionales y agencias del marketing digital,
+            recibirán tu petición. Si creen que pueden ayudarte se pondrán en contacto contigo.
         </p>
         <div class="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
             <div>
@@ -81,7 +79,7 @@
                 <div class="mt-6">
                     <h3 class="text-lg font-semibold leading-8 text-white">Ahorra tiempo</h3>
                     <p class="mt-2 text-base leading-7 text-indigo-200">No pases tus horas buscando o preguntando en
-                        Internet qué profesional o qué agencia puede ayudarte. Escribe una vez lo que necesitas y te
+                        Internet qué freelancers o qué agencias pueden ayudarte. Escribe una vez lo que necesitas y te
                         ponemos en contacto.</p>
                 </div>
             </div>
@@ -117,9 +115,11 @@
                     </span>
                 </div>
                 <div class="mt-6">
-                    <h3 class="text-lg font-semibold leading-8 text-white">Email Commenting</h3>
-                    <p class="mt-2 text-base leading-7 text-indigo-200">Ac tincidunt sapien vehicula erat auctor
-                        pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                    <h3 class="text-lg font-semibold leading-8 text-white">Escribe una vez</h3>
+                    <p class="mt-2 text-base leading-7 text-indigo-200">
+                        No tendrás que entrar en diferentes páginas, contactar en varios formularios, hacer varias búsquedas ni preguntar por ahí,
+                        lo hacemos por ti.
+                    </p>
                 </div>
             </div>
 
@@ -137,7 +137,7 @@
                 <div class="mt-6">
                     <h3 class="text-lg font-semibold leading-8 text-white">Seleccionados a mano</h3>
                     <p class="mt-2 text-base leading-7 text-indigo-200">Las agencias y profesionales que recibirán tu
-                        propuesta han sido seleccionadas a mano por nosotros, seleccionar a los mejores.</p>
+                        propuesta han sido seleccionadas a mano por nosotros, seleccionar a los mejores. No queremos que pierdas el tiempo.</p>
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@
 <div class="bg-indigo-50">
     <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-24 lg:px-8">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-        <span class="block">Encuentra ayuda fácilmente</span>
+        <span class="block">Encuentra soluciones a tus problemas</span>
         <span class="block text-indigo-600">Publica ahora. No te costará nada.</span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">

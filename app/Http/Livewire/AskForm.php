@@ -2,21 +2,21 @@
 
 namespace App\Http\Livewire;
 
+use App\Mail\VerifyOffer;
 use App\Models\Category;
 use App\Models\Offer;
-use Filament\Forms;
-use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Placeholder;
+use Closure;
 use Livewire\Component;
 
+use Filament\Forms;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
-use Filament\Forms\Components\Wizard;
-use Illuminate\Support\HtmlString;
+use Illuminate\Support\Facades\Mail;
+
 
 class AskForm extends Component implements Forms\Contracts\HasForms
 {
@@ -24,19 +24,18 @@ class AskForm extends Component implements Forms\Contracts\HasForms
 
     public Offer $offer;
 
-    public $companyName = '';
-    public $email = '';
-    public $categories = [];
-
-
     public function mount(): void
     {
-        $this->form->fill();
+        $this->form->fill([
+            'status' => 'draft',
+        ]);
     }
 
     protected function getFormSchema(): array
     {
         return [
+
+            Hidden::make('status')->required()->in(['draft']),
 
             Section::make('¿Con qué te gustaría que te ayudasen?')
                 ->description('Explica qué necesitas, qué servicio estás buscando y qué retos enfrentas para que los profesionales y agencias puedan valorar si te pueden ayudar.')
@@ -64,7 +63,8 @@ class AskForm extends Component implements Forms\Contracts\HasForms
 
                         ]),
 
-                    Radio::make('type')
+                    Radio::make('frequency')
+                        ->in(['once', 'monthly'])
                         ->label('¿Trabajo puntual o mensual?')
                         ->required()
                         ->options([
@@ -72,7 +72,7 @@ class AskForm extends Component implements Forms\Contracts\HasForms
                             'monthly' => 'Mensual',
                         ]),
 
-                    RichEditor::make('content')
+                    RichEditor::make('details')
                         ->label('Detalles de lo que buscas')
                         ->required()
                         ->toolbarButtons([
@@ -91,15 +91,29 @@ class AskForm extends Component implements Forms\Contracts\HasForms
                         ]),
 
                     Radio::make('type')
-                        ->label('¿Prefieres que te contacten profesionales, agencias o ambos?')
+                        ->label('¿Prefieres que te contacten freelancers, agencias o ambos?')
+                        ->in(['both', 'freelancers', 'agencies'])
                         ->required()
                         ->options([
                             'both' => 'Ambos',
-                            'freelancers' => 'Solo profesionales',
+                            'freelancers' => 'Solo freelancers',
                             'agencies' => 'Solo agencias',
                         ]),
 
                     TextInput::make('contact')
+                        ->rules([
+                            function () {
+                                return function (string $attribute, $value, Closure $fail) {
+                                    if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
+                                        return true;
+                                    } elseif(preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$value)) {
+                                       return true;
+                                    }
+
+                                    $fail("Para que puedan contactarte tienes que facilitar un correo o una dirección web.");
+                                };
+                            },
+                        ])
                         ->required()
                         ->label('¿Cómo quieres que te contacten?')
                         ->helperText('Deja un correo electrónico o una dirección web
@@ -117,7 +131,7 @@ class AskForm extends Component implements Forms\Contracts\HasForms
                 ->description('Queremos saber quién eres')
                 ->schema([
                     TextInput::make('email')->email()->required()->helperText('Este correo no lo compartimos con nadie, eso solo para verificar tu identidad.'),
-                    TextInput::make('name')->label('Tu Nombre')->required(),
+                    TextInput::make('contact_name')->label('Tu Nombre')->required(),
                     TextInput::make('company_name')->label('Nombre de la empresa')->required(),
                     TextInput::make('website')->required(),
                 ]),
@@ -125,9 +139,14 @@ class AskForm extends Component implements Forms\Contracts\HasForms
         ];
     }
 
-    public function submit(): void
+    public function submit()
     {
-        Offer::create($this->form->getState());
+        $offer = Offer::create($this->form->getState());
+
+        Mail::to($offer->email)->send(new VerifyOffer($offer));
+
+        return redirect()->to(route('verifyEmail'));
+
     }
 
     protected function getOfferModel(): string

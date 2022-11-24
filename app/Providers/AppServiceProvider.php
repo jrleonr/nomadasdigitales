@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \Illuminate\Support\Facades\Gate::define('viewMailcoach', function ($user = null) {
+            //return optional($user)->admin;
+            if($user->email == 'jrleon84@gmail.com') return true;
+        });
     }
 }

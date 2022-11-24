@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
+            $table->string('status')->index();
             $table->foreignId('category_id')->index();
             $table->string('budget');
             $table->string('frequency');
