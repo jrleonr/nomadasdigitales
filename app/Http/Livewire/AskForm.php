@@ -133,7 +133,7 @@ class AskForm extends Component implements Forms\Contracts\HasForms
                     TextInput::make('email')->email()->required()->helperText('Este correo no lo compartimos con nadie, eso solo para verificar tu identidad.'),
                     TextInput::make('contact_name')->label('Tu Nombre')->required(),
                     TextInput::make('company_name')->label('Nombre de la empresa')->required(),
-                    TextInput::make('website')->required(),
+                    TextInput::make('website')->required()->activeUrl(),
                 ]),
 
         ];

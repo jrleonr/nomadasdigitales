@@ -33,7 +33,7 @@ class ValidateOffer extends Component
         $emailList = EmailList::where('uuid', env('MAILCOACH_LIST_USERS'))->first();
 
         $subscriber = $emailList->subscribeskippingConfirmation($this->email, [
-            'first_name' => $this->offer->name, 
+            'first_name' => $this->offer->contact_name, 
         ]);
 
         Notification::make() 
