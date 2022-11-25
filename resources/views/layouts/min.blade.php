@@ -40,7 +40,23 @@
                     </defs>
                 </svg>
             </div>
-         
+            <div class="px-6 pt-6 lg:px-8">
+                <div>
+                    <nav class="flex h-9 items-center justify-between" aria-label="Global">
+                        <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+                            <a href="{{route('homepage')}}" class="-m-1.5 p-1.5">
+                                <span class="sr-only">LinkForm</span>
+                                <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                    alt="">
+                            </a>
+                        </div>
+             
+              
+                  
+                    </nav>
+                   
+                </div>
+            </div>
             <main>
                 {{ $slot }}
             </main>
@@ -50,8 +66,14 @@
 
     <footer class="bg-white">
         <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
-   
-          <p class="mt-8 text-center text-base text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+            <!-- <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-500 hover:text-gray-900">About</a>
+            </div> -->
+
+          </nav>
+       
+          <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 LinkForm, Inc. All rights reserved.</p>
         </div>
       </footer>
       

@@ -1,8 +1,7 @@
 
-<div class="bg-white py-16 sm:py-24">
+<div class="py-16 sm:py-18">
     <div class="relative sm:py-16">
       <div aria-hidden="true" class="hidden sm:block">
-        <div class="absolute inset-y-0 left-0 w-1/2 rounded-r-3xl bg-gray-50"></div>
         <svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
           <defs>
             <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">

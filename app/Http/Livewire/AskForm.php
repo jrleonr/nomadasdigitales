@@ -133,7 +133,7 @@ class AskForm extends Component implements Forms\Contracts\HasForms
                     TextInput::make('email')->email()->required()->helperText('Este correo no lo compartimos con nadie, eso solo para verificar tu identidad.'),
                     TextInput::make('contact_name')->label('Tu Nombre')->required(),
                     TextInput::make('company_name')->label('Nombre de la empresa')->required(),
-                    TextInput::make('website')->required()->activeUrl(),
+                    TextInput::make('website')->required()->url(),
                 ]),
 
         ];
@@ -156,6 +156,6 @@ class AskForm extends Component implements Forms\Contracts\HasForms
 
     public function render()
     {
-        return view('livewire.ask-form');
+        return view('livewire.ask-form')->layout('layouts.min');
     }
 }

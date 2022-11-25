@@ -19,13 +19,16 @@ module.exports = {
                 success: colors.green,
                 warning: colors.yellow,
             },
+            corePlugins: {
+                aspectRatio: false,
+            },
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'),require('@tailwindcss/aspect-ratio'),],
 };
 
 

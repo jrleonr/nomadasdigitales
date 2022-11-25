@@ -144,6 +144,34 @@
     </div>
 </div>
 
+  
+<div class="bg-white">
+  <div class="mx-auto max-w-7xl divide-y-2 divide-gray-200 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Preguntas frecuentes</h2>
+    <div class="mt-6 pt-10">
+      <dl class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 md:space-y-0">
+        <div>
+          <dt class="text-lg font-medium leading-6 text-gray-900">¿Para qué sirve esta web?</dt>
+          <dd class="mt-2 text-base text-gray-500">
+              El objetivo es ponerte en contacto con freelancers y agencias que puedan ayudarte con tu proyecto digital.
+              Muchas veces tenemos que tirar de contactos y encontrar alguna recomendación... ¿Conoces a alguien que sepa de.. SEO, pubicidad, branding...?
+              Pues aquí te damos la respuesta a cualquier necesidad que tengas. Detallas lo que necesitas y te ponemos en contacto.
+          </dd>
+        </div>
+        <div>
+          <dt class="text-lg font-medium leading-6 text-gray-900">¿Quién me va a contactar?</dt>
+          <dd class="mt-2 text-base text-gray-500">
+              Compartiremos tu petición con agencias y profesionales que encajen mejor en lo que buscas. Los validamos a mano. Queremos que te contacten solo
+              agencias que realmente puedan ayudarte.
+          </dd>
+        </div>
+
+        <!-- More questions... -->
+      </dl>
+    </div>
+  </div>
+</div>
+
 
 <div class="bg-indigo-50">
     <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-24 lg:px-8">
@@ -160,48 +188,45 @@
     </div>
   </div>
   
-  
-  <div class="bg-white">
-    <div class="mx-auto max-w-7xl divide-y-2 divide-gray-200 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900">Frequently asked questions</h2>
-      <div class="mt-6 pt-10">
-        <dl class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 md:space-y-0">
-          <div>
-            <dt class="text-lg font-medium leading-6 text-gray-900">What&#039;s the best thing about Switzerland?</dt>
-            <dd class="mt-2 text-base text-gray-500">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</dd>
-          </div>
-  
-          <!-- More questions... -->
-        </dl>
-      </div>
-    </div>
-  </div>
 
 
-  <div class="relative bg-gray-800">
-    <div class="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-      <img class="h-full w-full object-cover" src="https://pbs.twimg.com/profile_images/1587380901478023169/9pXL_i0x_400x400.jpg" alt="">
-    </div>
-    <div class="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="md:ml-auto md:w-1/2 md:pl-10">
-        <h2 class="text-lg font-semibold text-gray-300">Award winning support</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">We’re here to help</p>
-        <p class="mt-3 text-lg text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis.</p>
-        <div class="mt-8">
-          <div class="inline-flex rounded-md shadow">
-            <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50">
-              Visit the help center
-              <!-- Heroicon name: mini/arrow-top-right-on-square -->
-              <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
-                <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </div>
+<!-- <div class="bg-indigo-50">
+    <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+      <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+        <div class="space-y-5 sm:space-y-4">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Quién está detrás del proyecto</h2>
+          <p class="text-xl text-gray-500">Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.</p>
+        </div>
+        <div class="lg:col-span-2 sm:ml-24">
+          <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+            <li>
+              <div class="space-y-4">
+                <div class="aspect-w-3 aspect-h-2">
+                  <img class="rounded-lg object-cover shadow-lg" src="https://pbs.twimg.com/profile_images/1587380901478023169/9pXL_i0x_400x400.jpg" alt="">
+                </div>
+                <div class="space-y-1 text-lg font-medium leading-6">
+                  <h3>José León</h3>
+                  <p class="text-indigo-600">Fundador de LinkForm</p>
+                </div>
+                <div class="text-lg">
+                  <p class="text-gray-500">
+                    Soy copywriters y mentor de negocios digitales. Ayudo a empresas y agencias a mejorar sus productos y posicionamiento en el mercado. 
+                    He creado LinkForm para conectar empresas y proyectos 
+                    con profesionales que les puedan ayudar a seguir creciendo y mejorando su negocio.
+                  </p>
+                </div>
+  
+                
+              </div>
+            </li>
+  
+          </ul>
         </div>
       </div>
     </div>
   </div>
+   -->
+
     
 
 
