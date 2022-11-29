@@ -2,10 +2,12 @@
 
     <div class="mx-auto max-w-3xl md:text-center pt-20 sm:pt-20 sm:pb-10">
         <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Contacta con las mejores agencias y profesionales
+            Verifica tu oferta antes de enviarla
         </h2>
         <p class="mt-4 text-lg tracking-tight text-slate-700">
-            Escribe lo que necesites una vez y deja que tu mensaje llegue a agencias y profesionales seleccionados a mano y recibe propuestas cómodamente sin coste añadido.
+            Asegúrate que todo está bien. Una vez la envíes, la validaremos manualmente y se la enviaremos 
+            a las agencias y freelancers que mejor encajen con lo que estás buscando para que empiecen 
+            a enviarte propuestas para solucionar tu problema. 
         </p>
     </div>
     <form wire:submit.prevent="submit">
@@ -13,12 +15,12 @@
         
         <div class="flex sm:justify-center ">
             <button type="submit" class=" mt-4 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                Último paso: revisa tu oferta <span class="text-indigo-200" aria-hidden="true"> &nbsp; &rarr;</span>
+                Envíanos tu oferta <span class="text-indigo-200" aria-hidden="true"> &nbsp; &rarr;</span>
             </button>
             
         </div>
         <p class="mt-3 flex text-sm text-gray-500 sm:justify-center">
-            Haz clic en el botón para ir al siguiente paso. Podrás volver revisar tu oferta.
+            Haz clic en el botón para que recibamos tu propuesta y podamos compartirla.
         </p>
 
     </form>

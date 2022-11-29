@@ -8,31 +8,15 @@ use Livewire\Component;
 use Illuminate\Http\Request;
 use Spatie\Mailcoach\Domain\Audience\Models\EmailList;
 
-class ValidateOffer extends Component 
+class OfferValidated extends Component 
 {
-    public $email;
-
-    public function mount(Request $request)
-    {
-        if (! $request->hasValidSignature()) {
-            abort(401);
-        }
-
-        $this->email = $request->email;
-
-        $this->offer = Offer::where('email', $this->email)->where('id', $request->offer)->first();
-        $this->offer->status = 'to verify';
-        $this->offer->save();
-
-
-
-    }
+    public Offer $offer;
 
     public function submit()
     {
         $emailList = EmailList::where('uuid', env('MAILCOACH_LIST_USERS'))->first();
 
-        $subscriber = $emailList->subscribeskippingConfirmation($this->email, [
+        $subscriber = $emailList->subscribeskippingConfirmation($this->offer->email, [
             'first_name' => $this->offer->contact_name, 
         ]);
 

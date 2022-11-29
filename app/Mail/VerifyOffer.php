@@ -53,7 +53,7 @@ class VerifyOffer extends Mailable
         return new Content(
             markdown: 'emails.verify-offer',
             with: [
-                'url' => URL::signedRoute('validateOffer', ['email' => $this->offer->email, 'offer' => $this->offer->id]),
+                'url' => URL::signedRoute('ask-form-edit', ['offer' => $this->offer->id]),
             ],
 
         );

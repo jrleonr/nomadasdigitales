@@ -3533,16 +3533,16 @@
         },
         {
             "name": "maennchen/zipstream-php",
-            "version": "2.2.1",
+            "version": "2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maennchen/ZipStream-PHP.git",
-                "reference": "211e9ba1530ea5260b45d90c9ea252f56ec52729"
+                "reference": "30ad6f93cf3efe4192bc7a4c9cad11ff8f4f237f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/211e9ba1530ea5260b45d90c9ea252f56ec52729",
-                "reference": "211e9ba1530ea5260b45d90c9ea252f56ec52729",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/30ad6f93cf3efe4192bc7a4c9cad11ff8f4f237f",
+                "reference": "30ad6f93cf3efe4192bc7a4c9cad11ff8f4f237f",
                 "shasum": ""
             },
             "require": {
@@ -3553,6 +3553,7 @@
             },
             "require-dev": {
                 "ext-zip": "*",
+                "friendsofphp/php-cs-fixer": "^3.9",
                 "guzzlehttp/guzzle": "^6.5.3 || ^7.2.0",
                 "mikey179/vfsstream": "^1.6",
                 "php-coveralls/php-coveralls": "^2.4",
@@ -3594,15 +3595,19 @@
             ],
             "support": {
                 "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
-                "source": "https://github.com/maennchen/ZipStream-PHP/tree/2.2.1"
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/2.2.6"
             },
             "funding": [
+                {
+                    "url": "https://github.com/maennchen",
+                    "type": "github"
+                },
                 {
                     "url": "https://opencollective.com/zipstream",
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-05-18T15:52:06+00:00"
+            "time": "2022-11-25T18:57:19+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -6314,17 +6319,17 @@
         },
         {
             "name": "spatie/laravel-mailcoach",
-            "version": "6.2.3",
+            "version": "6.2.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:spatie/laravel-mailcoach.git",
-                "reference": "b2f6eb6e8207f8148d35d4bb23777e77618f9d89"
+                "reference": "39208d975a445aefb325dc154cdb062427041ca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://satis.spatie.be/dist/spatie/laravel-mailcoach/spatie-laravel-mailcoach-b2f6eb6e8207f8148d35d4bb23777e77618f9d89-zip-2f8911.zip",
-                "reference": "b2f6eb6e8207f8148d35d4bb23777e77618f9d89",
-                "shasum": "8cfc3ca1785b56b21f6a8c19081d3427035a4c85"
+                "url": "https://satis.spatie.be/dist/spatie/laravel-mailcoach/spatie-laravel-mailcoach-39208d975a445aefb325dc154cdb062427041ca1-zip-49bf76.zip",
+                "reference": "39208d975a445aefb325dc154cdb062427041ca1",
+                "shasum": "89da0de2c3ebebbcf824c4ba37ac945185ff033e"
             },
             "require": {
                 "cakephp/chronos": "^2.0",
@@ -6461,10 +6466,10 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/laravel-mailcoach/tree/6.2.3",
+                "source": "https://github.com/spatie/laravel-mailcoach/tree/6.2.4",
                 "issues": "https://github.com/spatie/laravel-mailcoach/issues"
             },
-            "time": "2022-11-23T08:53:31+00:00"
+            "time": "2022-11-25T09:15:19+00:00"
         },
         {
             "name": "spatie/laravel-mailcoach-editor",

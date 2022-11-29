@@ -15,7 +15,7 @@
                     Encuentra los mejores freelancers y agencias para ayudarte en tu negocio.
                 </p>
                 <div class="mt-8 flex gap-x-4 sm:justify-center">
-                    <a href="{{route('askForm')}}"
+                    <a href="{{route('ask-form')}}"
                         class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
                         Publica Tu Oferta
                         <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
@@ -181,7 +181,7 @@
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
-          <a href="{{route('askForm')}}" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Publica Tu Oferta 
+          <a href="{{route('ask-form')}}" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Publica Tu Oferta 
             <span class="text-white" aria-hidden="true">&rarr;</span></a>
         </div>
       </div>

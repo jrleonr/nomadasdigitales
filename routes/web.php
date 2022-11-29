@@ -1,20 +1,22 @@
 <?php
 
 use App\Http\Livewire\AskForm;
+use App\Http\Livewire\AskFormEdit;
 use App\Http\Livewire\Homepage;
-use App\Http\Livewire\ValidateOffer;
-use App\Http\Livewire\VerifyEmail;
+use App\Http\Livewire\OfferValidated;
+use App\Http\Livewire\ShowOffer;
+use App\Http\Livewire\VerifyOfferByEmail;
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 
 
 
 Route::get('/', Homepage::class)->name('homepage');
-Route::get('/form', AskForm::class)->name('askForm');
-Route::get('/verify', VerifyEmail::class)->name('verifyEmail');
-
-
-Route::get('/validate', ValidateOffer::class)->name('validateOffer');
+Route::get('/form', AskForm::class)->name('ask-form');
+Route::get('/form/{offer}', AskFormEdit::class)->name('ask-form-edit');
+Route::get('/offer/{offer}', ShowOffer::class)->name('show-offer');
+Route::get('/verifica-tu-oferta', VerifyOfferByEmail::class)->name('validate-offer');
+Route::get('/oferta-validada/{offer}', OfferValidated::class)->name('offer-validated');
 
 Route::middleware([
     'auth:sanctum',

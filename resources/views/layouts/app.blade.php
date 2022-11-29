@@ -58,7 +58,7 @@
                         </div>
                         <div class=" lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                         
-                                <a href="{{route('askForm')}}" class="inline-block rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
+                                <a href="{{route('ask-form')}}" class="inline-block rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
                                     Publica Tu Oferta
                                     <span class="text-indigo-200" aria-hidden="true">&rarr;</span>
                                   </a>    
