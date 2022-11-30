@@ -10,21 +10,22 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Address;
-use Illuminate\Support\Facades\URL;
 
 class VerifyOffer extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
     public $offer;
+    public $url;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Offer $offer)
+    public function __construct(Offer $offer, $url)
     {
         $this->offer = $offer;
+        $this->url = $url;
     }
 
 
@@ -35,8 +36,6 @@ class VerifyOffer extends Mailable implements ShouldQueue
      */
     public function envelope()
     {        
-
-        
         return new Envelope(
             from: new Address('no-reply@linkform.io', 'José León'),
             subject: 'Verifica tu oferta',
@@ -53,7 +52,7 @@ class VerifyOffer extends Mailable implements ShouldQueue
         return new Content(
             markdown: 'emails.verify-offer',
             with: [
-                'url' => URL::signedRoute('ask-form-edit', ['offer' => $this->offer->id]),
+                'url' => $this->url,
             ],
 
         );

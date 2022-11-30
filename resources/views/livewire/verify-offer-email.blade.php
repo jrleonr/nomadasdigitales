@@ -8,7 +8,7 @@
             <p class="mt-1 text-base text-gray-500">
                 Vete a tu correo electrónico y haz clic en el botón en el correo que te hemos enviado. 
                 Queremos validar que eres tú. Una vez hecho, podrás verificar tu oferta una vez más antes de enviarla. 
-                Una vez hecho, podremos enviar tu propuesta a las agencias y freelancers para que te contacten lo antes posible.
+                Una vez hecho, podremos enviar tu propuesta a las agencias para que encuentres ayuda lo antes posible.
             </p>
           </div>
         </div>
