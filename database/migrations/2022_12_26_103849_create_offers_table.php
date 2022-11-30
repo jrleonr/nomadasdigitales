@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('email')->index();
             $table->string('contact_name');
             $table->string('company_name');
-            $table->foreignId('industry_id')->constrained();
             $table->string('website');
             $table->timestamps();
         });

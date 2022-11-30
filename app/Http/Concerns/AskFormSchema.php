@@ -10,7 +10,6 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Concerns\InteractsWithForms;
 use App\Models\Category;
-use App\Models\Industry;
 use Closure;
 
 
@@ -125,11 +124,6 @@ trait AskFormSchema
                     TextInput::make('contact_name')->label('Tu Nombre')->required(),
                     TextInput::make('company_name')->label('Nombre de la empresa')->required(),
                     TextInput::make('website')->required()->url(),
-                    Select::make('industry_id')
-                        ->label('¿En qué industria trabajas?')
-                        ->options(Industry::all()->sortBy('name')->pluck('name', 'id'))
-                        ->required()
-                        ->searchable(),
                 ]),
 
         ];

@@ -23,9 +23,6 @@
 ### Website
 {{$offer->website}}
 
-### Industria
-{{$offer->industry->name}}
-
 ## Detalles
 
 <x-mail::panel>
