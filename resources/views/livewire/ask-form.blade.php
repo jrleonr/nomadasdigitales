@@ -1,4 +1,4 @@
-<div class="mx-auto max-w-4xl pb-32 sm:pb-40">
+<div class="mx-auto max-w-4xl px-6 sm:px-0 pb-32 sm:pb-40">
 
     <div class="mx-auto max-w-3xl md:text-center pt-20 sm:pt-20 sm:pb-10">
         <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
