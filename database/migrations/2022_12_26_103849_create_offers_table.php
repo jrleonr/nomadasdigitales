@@ -16,17 +16,16 @@ return new class extends Migration
         Schema::create('offers', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('status')->index();
-            $table->foreignId('category_id')->index();
+            $table->foreignId('category_id')->constrained();
             $table->string('budget');
             $table->string('frequency');
             $table->text('details');
-            $table->string('type');
             $table->string('contact');
-
 
             $table->string('email')->index();
             $table->string('contact_name');
             $table->string('company_name');
+            $table->foreignId('industry_id')->constrained();
             $table->string('website');
             $table->timestamps();
         });

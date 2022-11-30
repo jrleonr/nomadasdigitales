@@ -19,5 +19,9 @@ class Offer extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class);
+    }
  
 }

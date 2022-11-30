@@ -1,26 +1,30 @@
 <?php
 
-namespace App\Mail;
+namespace App\Mail\Admin;
 
+use App\Models\Offer;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Address;
 
-class OrderShipped extends Mailable
+class NewOffer extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
+
+    public $offer;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Offer $offer)
     {
-        //
+        $this->offer = $offer;
     }
 
     /**
@@ -31,7 +35,8 @@ class OrderShipped extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Order Shipped',
+            from: new Address('joseleon@linkform.io', 'José León'),
+            subject: 'Nueva Oferta: ' . $this->offer->id,
         );
     }
 
@@ -43,7 +48,7 @@ class OrderShipped extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'emails.bla',
+            markdown: 'emails.new-offer',
         );
     }
 

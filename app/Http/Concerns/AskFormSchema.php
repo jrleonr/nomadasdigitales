@@ -10,6 +10,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Concerns\InteractsWithForms;
 use App\Models\Category;
+use App\Models\Industry;
 use Closure;
 
 
@@ -24,12 +25,12 @@ trait AskFormSchema
             Hidden::make('status')->required()->in(['draft']),
 
             Section::make('¿Con qué te gustaría que te ayudasen?')
-                ->description('Explica qué necesitas, qué servicio estás buscando y qué retos enfrentas para que los profesionales y agencias puedan valorar si te pueden ayudar.')
+                ->description('Explica qué necesitas, qué servicio estás buscando y qué retos enfrentas para que las agencias puedan valorar si te pueden ayudar.')
                 ->schema([
 
                     Select::make('category_id')
                         ->label('¿Qué servicio necesitas?')
-                        ->options(Category::all()->pluck('name', 'id'))
+                        ->options(Category::all()->sortBy('name')->pluck('name', 'id'))
                         ->required()
                         ->searchable(),
 
@@ -60,6 +61,7 @@ trait AskFormSchema
 
                     RichEditor::make('details')
                         ->label('Detalles de lo que buscas')
+                        ->helperText('Comparte todos los detalles de lo que necesitas. Si tu descripción es poco específica será muy difícil encontrarte el socio adecuado para lo que estás buscando.')
                         ->required()
                         ->toolbarButtons([
                             'blockquote',
@@ -74,16 +76,6 @@ trait AskFormSchema
                             'redo',
                             'strike',
                             'undo',
-                        ]),
-
-                    Radio::make('type')
-                        ->label('¿Prefieres que te contacten freelancers, agencias o ambos?')
-                        ->in(['both', 'freelancers', 'agencies'])
-                        ->required()
-                        ->options([
-                            'both' => 'Ambos',
-                            'freelancers' => 'Solo freelancers',
-                            'agencies' => 'Solo agencias',
                         ]),
 
                     TextInput::make('contact')
@@ -103,7 +95,7 @@ trait AskFormSchema
                         ->required()
                         ->label('¿Cómo quieres que te contacten?')
                         ->helperText('Deja un correo electrónico o una dirección web
-                        a un formulario online, Google Form, TypeForm, Calendly o similares.'),
+                        a un formulario online, Google Form, TypeForm, Calendly o similares. Solo compartiremos este dato con 3/5 agencias.'),
 
 
 
@@ -133,6 +125,11 @@ trait AskFormSchema
                     TextInput::make('contact_name')->label('Tu Nombre')->required(),
                     TextInput::make('company_name')->label('Nombre de la empresa')->required(),
                     TextInput::make('website')->required()->url(),
+                    Select::make('industry_id')
+                        ->label('¿En qué industria trabajas?')
+                        ->options(Industry::all()->sortBy('name')->pluck('name', 'id'))
+                        ->required()
+                        ->searchable(),
                 ]),
 
         ];

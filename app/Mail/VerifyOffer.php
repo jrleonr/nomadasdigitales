@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Support\Facades\URL;
 
-class VerifyOffer extends Mailable
+class VerifyOffer extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
     public $offer;

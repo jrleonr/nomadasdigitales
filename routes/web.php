@@ -12,9 +12,9 @@ use Livewire\Livewire;
 
 
 Route::get('/', Homepage::class)->name('homepage');
-Route::get('/form', AskForm::class)->name('ask-form');
-Route::get('/form/{offer}', AskFormEdit::class)->name('ask-form-edit');
-Route::get('/offer/{offer}', ShowOffer::class)->name('show-offer');
+Route::get('/publica', AskForm::class)->name('ask-form');
+Route::get('/oferta/{offer}/editar', AskFormEdit::class)->name('ask-form-edit');
+Route::get('/oferta/{offer}', ShowOffer::class)->name('show-offer');
 Route::get('/verifica-tu-oferta', VerifyOfferByEmail::class)->name('validate-offer');
 Route::get('/oferta-validada/{offer}', OfferValidated::class)->name('offer-validated');
 

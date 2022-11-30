@@ -3,10 +3,12 @@
 namespace App\Http\Livewire;
 
 use App\Http\Concerns\AskFormSchema;
+use App\Mail\Admin\NewOffer;
 use App\Models\Offer;
 use Livewire\Component;
 use Filament\Forms;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AskFormEdit extends Component implements Forms\Contracts\HasForms
 {
@@ -38,8 +40,7 @@ class AskFormEdit extends Component implements Forms\Contracts\HasForms
         $this->offer->status = 'to verify';
         $this->offer->save();
 
-        //send offer to me
-        //TODO
+        Mail::to('joseleon@linkform.io')->send(new NewOffer($this->offer));
 
         return redirect()->to(route('offer-validated', ['offer' => $this->offer]));
 

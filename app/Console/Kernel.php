@@ -15,6 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('horizon:snapshot')->everyFiveMinutes();
+        
         $schedule->command('mailcoach:send-automation-mails')->everyMinute();
         $schedule->command('mailcoach:send-scheduled-campaigns')->everyMinute();
         $schedule->command('mailcoach:send-campaign-mails')->everyMinute();
